@@ -1,0 +1,13 @@
+---
+# zcash compose instructions
+data:
+  container_name: zcash-data
+  image: busybox
+  volumes:
+    - ~/.zcash:/root/.zcash
+    - ~/.zcash-params:/root/.zcash-params
+zcash:
+  container_name: zcash
+  image: monachus/zcash
+  volumes_from:
+    - data
