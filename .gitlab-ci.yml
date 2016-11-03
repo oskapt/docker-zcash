@@ -5,7 +5,6 @@ before_script:
 build:
   stage: build
   script:
-    - cd build
     - docker build --pull -t registry.monach.us/docker/zcash --build-arg VCS_REF=$CI_BUILD_REF .
     - docker push registry.monach.us/docker/zcash
 
@@ -16,8 +15,8 @@ push_to_docker_hub:
     - docker tag registry.monach.us/docker/zcash:latest monachus/zcash:latest
     - docker push monachus/zcash
 
-ping_microbadger:
-  stage: deploy
-  script:
-    - curl -XPOST https://hooks.microbadger.com/images/monachus/zcash/4POfPA2VlfMloTzUFD50AF1fiMY=
+# ping_microbadger:
+#   stage: deploy
+#   script:
+#     - curl -XPOST https://hooks.microbadger.com/images/monachus/zcash/4POfPA2VlfMloTzUFD50AF1fiMY=
 
