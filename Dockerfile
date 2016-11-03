@@ -10,7 +10,7 @@ RUN apt-get update && apt-get -qq install apt-transport-https wget && \
     rm -fr /var/lib/apt/lists/*
 
 # Install [dumb-init](https://github.com/Yelp/dumb-init)
-ENV DI_VERSION 1.1.3
+ENV DI_VERSION 1.2.0
 RUN cd /tmp && \
     wget -q -O /bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v${DI_VERSION}/dumb-init_${DI_VERSION}_amd64 && \
     chmod +x /bin/dumb-init
