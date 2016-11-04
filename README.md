@@ -1,11 +1,28 @@
 # Docker ZEC Container
 
+[![](https://images.microbadger.com/badges/image/monachus/zcash.svg)](https://microbadger.com/images/monachus/zcash "Get your own image badge on microbadger.com")
+
 I built this container so that I could run ZCash functions under OSX
 (namely to have access to my wallet).
 
 It follows the [Debian installation guide](https://github.com/zcash/zcash/wiki/Debian-binary-packages)
 and will launch the `zcash` daemon on boot. If you don't set the environment
 up first, this will fail.
+
+## Pulling from Docker Hub
+
+You can pull the latest copy of this container from [Docker Hub](https://hub.docker.com/r/monachus/zcash/)
+by running:
+```
+$ docker pull monachus/zcash
+```
+
+## Building the Container
+
+Building the container is easy:
+```
+$ docker build -t monachus/zcash .
+```
 
 ## Setting Up The Environment
 

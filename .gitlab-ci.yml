@@ -15,8 +15,8 @@ push_to_docker_hub:
     - docker tag registry.monach.us/docker/zcash:latest monachus/zcash:latest
     - docker push monachus/zcash
 
-# ping_microbadger:
-#   stage: deploy
-#   script:
-#     - curl -XPOST https://hooks.microbadger.com/images/monachus/zcash/4POfPA2VlfMloTzUFD50AF1fiMY=
+ping_microbadger:
+  stage: deploy
+  script:
+    - curl -XPOST https://hooks.microbadger.com/images/monachus/zcash/paPUOBrQrKDlr3g5YBRtmu_En6o=
 
